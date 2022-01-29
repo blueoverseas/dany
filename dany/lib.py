@@ -1,7 +1,9 @@
 import re
 
 def try_me(text):
-    ### enter a text with an american phone # such as (555) 666-7777 ###
+    """
+    Enter a text with an american phone # such as (555) 666-7777
+    """
     phoneNumRegex = re.compile(r'(\d{3}|\(\d{3}\))?[- .]?\d{3}[- .]\d{4}')
     mo = phoneNumRegex.search(text)
     return 'Phone number found: ' + mo.group()
